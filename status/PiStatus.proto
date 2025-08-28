@@ -38,4 +38,5 @@ message LogMessage {
     string prefix = 2;
     string message = 3;
     string color = 4;
+    optional string pi_name = 5;
 }
