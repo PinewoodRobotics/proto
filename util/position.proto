@@ -14,6 +14,13 @@ message Position2d {
   util.Vector2 direction = 2;
 }
 
+message Rotation3d {
+  util.Vector3 directionX = 1;
+  util.Vector3 directionY = 2;
+  util.Vector3 directionZ = 3;
+  float yaw = 4;
+}
+
 message RobotPosition {
   oneof position {
     Position2d position_2d = 1;
