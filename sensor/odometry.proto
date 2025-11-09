@@ -8,4 +8,6 @@ package proto.sensor;
 message OdometryData {
     util.Position2d position = 1;
     util.Vector2 velocity = 2;
+    util.Vector2 position_change = 3;
+    float time_change_s = 4;
 }
