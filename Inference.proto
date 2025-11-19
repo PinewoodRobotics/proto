@@ -2,24 +2,24 @@ syntax = "proto3";
 
 package proto;
 
-import "util/vector.proto";
 import "util/position.proto";
+import "util/vector.proto";
 
 message RawInference {
-    float confidence = 1;
-    string class_name = 2;
-    int32 class_id = 3;
-    repeated util.Vector2 bounding_box = 4;
+  float confidence = 1;
+  string class_name = 2;
+  int32 class_id = 3;
+  repeated util.Vector2 bounding_box = 4;
 }
 
 message ProcessedInference { 
-    util.Vector3 position = 1;
-    util.Rotation3d rotation = 2;
+  util.Vector3 position = 1;
+  util.Rotation3d rotation = 2;
 }
 
 message InferenceList {
-    string camera_name = 1;
-    repeated RawInference raw_inferences = 2;
-    repeated ProcessedInference processed_inferences = 3;
-    float processing_time = 4;
+  string camera_name = 1;
+  repeated RawInference raw_inferences = 2;
+  repeated ProcessedInference processed_inferences = 3;
+  float processing_time = 4;
 }
