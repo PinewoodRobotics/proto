@@ -32,7 +32,7 @@ message PiStatus {
 
     repeated PiProcess top_10_processes = 9;
 
-    repeated string camera_ports_in_use = 10;
+    repeated string ports_in_use = 10;
 }
 
 message LogMessage {
