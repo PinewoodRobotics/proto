@@ -7,11 +7,14 @@ import "util/vector.proto";
 message Position3d {
   util.Vector3 position = 1;
   util.Vector3 direction = 2;
+  util.Vector3 velocity = 3;
 }
 
 message Position2d {
   util.Vector2 position = 1;
   util.Vector2 direction = 2;
+  util.Vector2 velocity = 3;
+  double rotation_speed_rad_s = 4;
 }
 
 message Rotation3d {
@@ -19,6 +22,9 @@ message Rotation3d {
   util.Vector3 directionY = 2;
   util.Vector3 directionZ = 3;
   float yaw = 4;
+  double angular_vel_pitch_rad_s = 5;
+  double angular_vel_yaw_rad_s = 6;
+  double angular_vel_roll_rad_s = 7;
 }
 
 message RobotPosition {
