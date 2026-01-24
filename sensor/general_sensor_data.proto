@@ -5,6 +5,7 @@ import "sensor/odometry.proto";
 import "sensor/camera_sensor.proto";
 import "sensor/imu.proto";
 import "sensor/lidar.proto";
+import "sensor/inference.proto";
 
 package proto.sensor;
 
@@ -14,6 +15,7 @@ enum SensorName {
   IMU = 2;
   LIDAR = 3;
   CAMERA = 4;
+  INFERENCE = 5;
 }
 
 message GeneralSensorData {
@@ -27,5 +29,6 @@ message GeneralSensorData {
     sensor.ImageData image = 7;
     sensor.LidarData lidar = 8;
     sensor.ImuData imu = 9;
+    sensor.InferenceData inference = 10;
   }
 }

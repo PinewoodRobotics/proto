@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "util/vector.proto";
+
+package proto.sensor;
+
+message InferenceData {
+    oneof data {
+        RawInferences raw_inferences = 1;
+    }
+}
+
+message RawInferences {
+    repeated Inference2d inferences_2d = 1;
+}
+
+// A generic 2D model output. `corners` should contain 4 points
+// (top-left, top-right, bottom-right, bottom-left) in image pixel coords.
+message Inference2d {
+    string label = 1;
+    float confidence = 2;
+    repeated util.Vector2 corners = 3;
+}
