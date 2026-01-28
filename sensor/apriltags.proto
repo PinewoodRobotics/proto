@@ -27,9 +27,11 @@ message ProcessedTag {
     repeated float pose_t = 3;
     util.Vector3 positionWPILib = 4;
     util.Rotation3d rotationWPILib = 5;
+    double confidence = 6;
 }
 
 message UnprocessedTag {
     int32 id = 1;
     repeated util.Vector2 corners = 2;
+    double confidence = 3;
 }
