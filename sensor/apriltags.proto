@@ -4,7 +4,7 @@ import "util/vector.proto";
 import "util/position.proto";
 
 
-package proto.sensor;
+package frc4765.proto.sensor;
 
 message AprilTagData {
     oneof data {

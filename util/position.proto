@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proto.util;
+package frc4765.proto.util;
 
 import "util/vector.proto";
 

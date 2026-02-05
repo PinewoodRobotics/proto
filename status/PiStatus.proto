@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proto.status;
+package frc4765.proto.status;
 
 enum StatusType {
     SYSTEM_STATUS = 0;

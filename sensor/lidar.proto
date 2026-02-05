@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "util/vector.proto";
 
-package proto.sensor;
+package frc4765.proto.sensor;
 
 message PointCloud2d {
     string lidar_id = 1;

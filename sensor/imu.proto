@@ -3,7 +3,7 @@ syntax = "proto3";
 import "util/vector.proto";
 import "util/position.proto";
 
-package proto.sensor;
+package frc4765.proto.sensor;
 
 message ImuData {
     util.Position3d position = 1;

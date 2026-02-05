@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proto.autobahn;
+package frc4765.proto.autobahn;
 
 enum MessageType {
   SERVER_STATE = 0;

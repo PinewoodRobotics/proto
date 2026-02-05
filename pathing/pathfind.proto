@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "util/vector.proto";
 
-package proto.pathfind;
+package frc4765.proto.pathfind;
 
 enum Algorithm {
   ASTAR = 0;

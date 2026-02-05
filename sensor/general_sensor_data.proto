@@ -7,7 +7,7 @@ import "sensor/imu.proto";
 import "sensor/lidar.proto";
 import "sensor/inference.proto";
 
-package proto.sensor;
+package frc4765.proto.sensor;
 
 enum SensorName {
   APRIL_TAGS = 0;

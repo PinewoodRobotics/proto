@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proto.sensor;
+package frc4765.proto.sensor;
 
 enum ImageFormat {
     UNKNOWN = 0;

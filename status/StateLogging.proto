@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proto.status;
+package frc4765.proto.status;
 
 // A generic, extensible logging message that can support new types in the future.
 message StateLogging {

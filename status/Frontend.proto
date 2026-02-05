@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proto.status;
+package frc4765.proto.status;
 
 message PIDFFUpdateMessage {
     float p = 1;
