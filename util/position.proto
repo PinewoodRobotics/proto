@@ -3,36 +3,67 @@ syntax = "proto3";
 package frc4765.proto.util;
 
 import "util/vector.proto";
+import "util/other.proto";
 
 message Position3d {
-  util.Vector3 position = 1;
-  util.Vector3 direction = 2;
-  util.Vector3 velocity = 3;
+  Vector3 position = 1;
+  Rotation3d rotation = 2;
 }
 
 message Position2d {
-  util.Vector2 position = 1;
-  util.Vector2 direction = 2;
-  util.Vector2 velocity = 3;
-  double rotation_speed_rad_s = 4;
+  Vector2 position = 1;
+  Rotation2d rotation = 2;
+}
+
+message Rotation2d {
+  float sin = 1;
+  float cos = 2;
 }
 
 message Rotation3d {
-  util.Vector3 directionX = 1;
-  util.Vector3 directionY = 2;
-  util.Vector3 directionZ = 3;
-  float yaw = 4;
-  double angular_vel_pitch_rad_s = 5;
-  double angular_vel_yaw_rad_s = 6;
-  double angular_vel_roll_rad_s = 7;
+  Rotation2d pitch = 1;
+  Rotation2d yaw = 2;
+  Rotation2d roll = 3;
+}
+
+message Twist2d {
+  Vector2 linear_velocity = 1;
+  float angular_velocity_rad_s = 2;
+}
+
+message Twist3d {
+  Vector3 linear_velocity = 1;
+  Vector3 angular_velocity_rad_s = 2;
+}
+
+message Accel2d {
+  Vector2 linear_acceleration = 1;
+  float angular_acceleration_rad_s_2 = 2;
+}
+
+message Accel3d {
+  Vector3 linear_acceleration = 1;
+  Vector3 angular_acceleration_rad_s_2 = 2;
+}
+
+message FullState2d {
+  Vector2 position = 1;
+  Rotation2d rotation = 2;
+  Twist2d velocity = 3;
+}
+
+message FullState3d {
+  Vector3 position = 1;
+  Rotation3d rotation = 2;
+  Twist3d velocity = 3;
 }
 
 message RobotPosition {
   oneof position {
-    Position2d position_2d = 1;
-    Position3d position_3d = 2;
+    FullState2d state_2d = 1;
+    FullState3d state_3d = 2;
   }
-  float timestamp = 3;
+  Timestamp timestamp = 3;
   float confidence = 4;
   repeated float P = 5;
 }
